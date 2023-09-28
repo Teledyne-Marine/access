@@ -65,7 +65,7 @@
       Once you have been approved, you will be able to gain access as a user and contributor to all the teledyne
       github project mentioned above.
       <hr>
-      <form method="POST" enctype="multipart/form-data" id="accessForm" class="accessFormClass">
+      <form action="javascript:void(0);" enctype="multipart/form-data" id="accessForm" class="accessFormClass">
         <div style="margin-left: 15px; margin-bottom: 15px;">
           <div style="margin-right: 15px;">
             <div class="form-group">
@@ -118,10 +118,12 @@
                   href="https://www.teledyne.com/privacy-policy/">
                   Teledyne’s Privacy Policy</a></label>
             </div>
-            <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+
           </div>
         </div>
+        <button type="submit" id="submit" class="btn btn-primary">Submit</button>
       </form>
+
 
       <div id="error" style="color: red;"></div>
       <div id="success" style="color: green;"></div>
@@ -136,6 +138,7 @@
     crossorigin="anonymous"></script>
 
   <script>
+
 
     document.getElementById("submit").addEventListener("click", function () {
 
