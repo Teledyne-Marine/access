@@ -42,77 +42,84 @@
 </nav>
 
 <body>
-  <div class="container" style="display: flex;flex-direction: row; justify-content: center; align-items: flex-start;">
+  <form action="javascript:void(0);" enctype="multipart/form-data" id="accessForm" class="accessFormClass">
+    <div class="container" style="display: flex;flex-direction: row; justify-content: center; align-items: flex-start;">
 
-    <div class="tdy-information-data">
-      <div class="tdy-information-data-icon-window">
-        <img class="tdy-information-data-icon" style="width: 48px;height: 48px;" src="./img/icons/github-mark.svg">
-      </div>
-      <div class="tdy-information-data-title-window" style="width: 300px;">
-        <h2>7kHeaders</h2>
+      <div class="tdy-information-data">
+        <div class="form-group" style="margin-right: 10px;">
+          <h2></h2>
+          <input type="checkbox" class="form-check-input" id="confirmation2" name="github7kheaders" checked>
 
-        [Description of 7k Headers here]
+        </div>
+        <div class="tdy-information-data-icon-window">
+          <img class="tdy-information-data-icon" style="width: 48px;height: 48px;" src="./img/icons/github-mark.svg">
+        </div>
+        <div class="tdy-information-data-title-window" style="width: 300px;">
+          <h2>7kHeaders</h2>
+
+          [Description of 7k Headers here]
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container" style="display: flex;flex-direction: row; justify-content: center; align-items: flex-start;">
+    <div class="container" style="display: flex;flex-direction: row; justify-content: center; align-items: flex-start;">
 
 
-    <div class="tdy-information-box" style="width: 90%">
-      <h2>Get Access</h2>
-      Please fill out the form below to request access to all our public github pages.
+      <div class="tdy-information-box" style="width: 90%">
+        <h2>Get Access</h2>
+        Please fill out the form below to request access to the selected public GitHub repositories. Once you have been
+        granted
+        access, you will be able to access as a user and contributor to the Teledyne GitHub repositories you have
+        selected
+        above.
+        <hr>
 
-      Once you have been approved, you will be able to gain access as a user and contributor to all the teledyne
-      github project mentioned above.
-      <hr>
-      <form action="javascript:void(0);" enctype="multipart/form-data" id="accessForm" class="accessFormClass">
         <div style="margin-left: 15px; margin-bottom: 15px;">
           <div style="margin-right: 15px;">
-            <div class="form-group">
-              <h2>First Name*</h2>
-              <input type="text" name="firstName" class="form-control" required>
+            <div class="form-group" style="margin-top: 10px;">
+              <h2>First name*</h2>
+              <input type="text" placeholder="First name" name="firstName" class="form-control" required>
             </div>
-            <div class="form-group">
-              <h2>Last Name*</h2>
-              <input type="text" name="lastName" class="form-control" required>
+            <div class="form-group" style="margin-top: 10px;">
+              <h2>Last name*</h2>
+              <input type="text" placeholder="Last name" name="lastName" class="form-control" required>
             </div>
-            <div class="form-group">
-              <h2>Github email adress*</h2>
-              <input type="email" name="emailAdress" class="form-control" required>
+            <div class="form-group" style="margin-top: 10px;">
+              <h2>Github email address*</h2>
+              <input type="email" placeholder="Github email address" name="emailAdress" class="form-control" required>
             </div>
-            <div class="form-group">
-              <h2>Full Company Name (if Applicable)</h2>
-              <input type="text" name="companyName" class="form-control">
+            <div class="form-group" style="margin-top: 10px;">
+              <h2>Full company name (if applicable)</h2>
+              <input type="text" placeholder="Full company name" name="companyName" class="form-control">
             </div>
-            <div class="form-group">
-              <h2>Address Row 1*</h2>
-              <input type="text" name="companyAddress" class="form-control" required>
+            <div class="form-group" style="margin-top: 10px;">
+              <h2>Address row 1*</h2>
+              <input type="text" placeholder="Address row 1" name="companyAddress" class="form-control" required>
             </div>
-            <div class="form-group">
-              <h2>Address Row 2</h2>
-              <input type="text" name="companyAddressTwo" class="form-control">
+            <div class="form-group" style="margin-top: 10px;">
+              <h2>Address row 2</h2>
+              <input type="text" placeholder="Address row 2" name="companyAddressTwo" class="form-control">
             </div>
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 10px;">
               <h2>City*</h2>
-              <input type="text" name="city" class="form-control" required>
+              <input type="text" placeholder="City" name="city" class="form-control" required>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 10px;">
               <h2>Zip*</h2>
-              <input type="text" name="zip" class="form-control" required>
+              <input type="text" placeholder="Zip" name="zip" class="form-control" required>
             </div>
-            <div class="form-group">
+            <div class="form-group" style="margin-top: 10px;">
               <h2>Country*</h2>
-              <input type="text" name="country" class="form-control" required>
+              <input type="text" placeholder="Country" name="country" class="form-control" required>
             </div>
 
-            <div class="form-check">
+            <div class="form-check" style="margin-top: 20px;">
               <input type="checkbox" class="form-check-input" id="confirmation" required>
               <label class="form-check-label" for="confirmation">I confirm that the information provided above is
                 accurate and
                 correct</label>
             </div>
 
-            <div class="form-check">
+            <div class="form-check" style="margin-top: 20px;">
               <input type="checkbox" class="form-check-input" id="privacyAgreement" required>
               <label class="form-check-label" for="privacyAgreement">I agree to <a
                   href="https://www.teledyne.com/privacy-policy/">
@@ -122,16 +129,17 @@
           </div>
         </div>
         <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-      </form>
 
 
-      <div id="error" style="color: red;"></div>
-      <div id="success" style="color: green;"></div>
+
+        <div id="error" style="color: red;"></div>
+        <div id="success" style="color: green;"></div>
 
 
+      </div>
     </div>
-  </div>
-  </div>
+    </div>
+  </form>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
@@ -150,9 +158,11 @@
 
       var formData = new FormData(form);
       var jsonData = {};
+      //Note: Checkboxes only appear if they are 'on'(checked)
       formData.forEach(function (value, key) {
         jsonData[key] = value;
       });
+      console.log(jsonData)
       // Example: Send JSON data to a server using fetch
       fetch('https://h3skk3vdiak5qq6lg5kqjbb3mu0lvtky.lambda-url.eu-central-1.on.aws/', {
         method: 'POST',
@@ -166,6 +176,53 @@
             console.log(response)
 
             document.getElementById("success").innerHTML = "Request received successfully! We will try to get back to you as soon as possible. ";
+            var innerHtmlElement = document.getElementById("success");
+            var table = document.createElement("table");
+            table.setAttribute("cellpadding", "5");
+            table.setAttribute("cellspacing", "0");
+            table.setAttribute("width", "100%");
+            table.setAttribute("color", "green");
+            table.style.fontFamily = "Arial";
+
+            // Define the field names and their corresponding FormData keys
+            var fieldMapping = {
+              "Github Email": "emailAdress",
+              "Name": "firstName",
+              "Last name": "lastName",
+              "Company": "companyName",
+              "Address": "companyAddress",
+              "": "companyAddressTwo",
+              "City": "city",
+              "Zip Code": "zipCode",
+              "Country": "country"
+            };
+
+            // Loop through the fieldMapping and create table rows
+            for (var fieldName in fieldMapping) {
+              var tr = document.createElement("tr");
+
+              // Create the first cell
+              var td1 = document.createElement("td");
+              td1.setAttribute("width", "30%");
+              td1.setAttribute("align", "left");
+              td1.textContent = fieldName;
+              td1.style.color = "green";
+
+              // Create the second cell with data from FormData
+              var td2 = document.createElement("td");
+              td2.setAttribute("align", "left");
+              td2.textContent = formData.get(fieldMapping[fieldName]);
+              td2.style.color = "green";
+
+              // Append cells to the row
+              tr.appendChild(td1);
+              tr.appendChild(td2);
+
+              // Append the row to the table
+              table.appendChild(tr);
+            }
+
+            innerHtmlElement.appendChild(table)
             document.getElementById('accessForm').classList.add('collapse');
           } else {
             document.getElementById("error").innerHTML = "Form submission failed. Please try again.";
@@ -173,6 +230,8 @@
         }).catch(error => {
           console.error('Error:', error);
           document.getElementById("error").innerHTML = "An error occurred while submitting the form.";
+
+
         });
     });
   </script>
