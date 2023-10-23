@@ -147,6 +147,16 @@
 
   <script>
 
+    function hasKeyStartingWithValue(obj, value) {
+      for (const key in obj) {
+
+        if (key.startsWith(value)) {
+          return true;
+        }
+      }
+      return false;
+    }
+
 
     document.getElementById("submit").addEventListener("click", function () {
 
@@ -162,7 +172,13 @@
       formData.forEach(function (value, key) {
         jsonData[key] = value;
       });
-      console.log(jsonData)
+
+      if (!hasKeyStartingWithValue(jsonData, "github")) {
+
+        document.getElementById("error").innerHTML = "Please select at minimal one repository.";
+        return;
+      }
+
       // Example: Send JSON data to a server using fetch
       fetch('https://h3skk3vdiak5qq6lg5kqjbb3mu0lvtky.lambda-url.eu-central-1.on.aws/', {
         method: 'POST',
