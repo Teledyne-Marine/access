@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<!--  This source code is exported from pxCode, you can get more document from https://www.pxcode.io  -->
 
 <head>
   <meta charset="utf-8">
@@ -55,9 +54,10 @@
           <img class="tdy-information-data-icon" style="width: 48px;height: 48px;" src="./img/icons/github-mark.svg">
         </div>
         <div class="tdy-information-data-title-window" style="width: 300px;">
-          <h2>7kHeaders</h2>
+          <h2><a href="https://github.com/Teledyne-Marine/7k">7k Headers</a></h2>
 
-          [Description of 7k Headers here]
+          This collection of 7k Headers contains the data format definition of the 7k protocol as well as access to
+          C++/C# example code.
         </div>
       </div>
     </div>
@@ -179,7 +179,7 @@
         return;
       }
 
-      // Example: Send JSON data to a server using fetch
+      //  Send JSON data to a server using fetch
       fetch('https://h3skk3vdiak5qq6lg5kqjbb3mu0lvtky.lambda-url.eu-central-1.on.aws/', {
         method: 'POST',
         body: JSON.stringify(jsonData),
@@ -200,7 +200,6 @@
             table.setAttribute("color", "green");
             table.style.fontFamily = "Arial";
 
-            // Define the field names and their corresponding FormData keys
             var fieldMapping = {
               "Github Email": "emailAdress",
               "Name": "firstName",
@@ -213,28 +212,22 @@
               "Country": "country"
             };
 
-            // Loop through the fieldMapping and create table rows
             for (var fieldName in fieldMapping) {
               var tr = document.createElement("tr");
 
-              // Create the first cell
               var td1 = document.createElement("td");
               td1.setAttribute("width", "30%");
               td1.setAttribute("align", "left");
               td1.textContent = fieldName;
               td1.style.color = "green";
 
-              // Create the second cell with data from FormData
               var td2 = document.createElement("td");
               td2.setAttribute("align", "left");
               td2.textContent = formData.get(fieldMapping[fieldName]);
               td2.style.color = "green";
 
-              // Append cells to the row
               tr.appendChild(td1);
               tr.appendChild(td2);
-
-              // Append the row to the table
               table.appendChild(tr);
             }
 
