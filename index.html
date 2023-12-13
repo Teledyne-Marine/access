@@ -191,7 +191,7 @@
           if (response.status == 200) {
             console.log(response)
 
-            document.getElementById("success").innerHTML = "Request received successfully! We will try to get back to you as soon as possible. ";
+            document.getElementById("success").innerHTML = "Request received successfully! When succesful you will get an email from github to add you as a collaborator to the selected projects";
             var innerHtmlElement = document.getElementById("success");
             var table = document.createElement("table");
             table.setAttribute("cellpadding", "5");
@@ -233,6 +233,15 @@
 
             innerHtmlElement.appendChild(table)
             document.getElementById('accessForm').classList.add('collapse');
+
+
+            var elementToRemove = document.getElementById('submit');
+
+            // Check if the element exists before attempting to remove it
+            if (elementToRemove) {
+              elementToRemove.parentNode.removeChild(elementToRemove);
+            }
+
           } else {
             document.getElementById("error").innerHTML = "Form submission failed. Please try again.";
           }
